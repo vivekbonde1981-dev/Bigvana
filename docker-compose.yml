@@ -1,0 +1,9 @@
+services:
+  portfolio-agency:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: agency_portfolio_site
+    ports:
+      - "80:80"
+    restart: always
