@@ -5,5 +5,5 @@ services:
       dockerfile: Dockerfile
     container_name: agency_portfolio_site
     ports:
-      - "80:80"
+      - "3000:3000"
     restart: always
