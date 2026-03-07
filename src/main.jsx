@@ -19,7 +19,9 @@ const router = createBrowserRouter([
       { path: "service", element: <StackedCards /> }
     ]
   }
-])
+], {
+  basename: "/portfolio" // <--- Add this configuration object here
+});
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
