@@ -9,5 +9,5 @@ RUN npm run build
 FROM nginx:stable-alpine
 # Copy the 'dist' folder from the build step to Nginx
 COPY --from=build /app/dist /usr/share/nginx/html
-EXPOSE 3000
+EXPOSE 80
 CMD ["nginx", "-g", "daemon off;"]
