@@ -2,6 +2,7 @@ import React, { useEffect, useRef } from 'react';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { useTheme } from "../ThemeContext";
+import { useNavigate } from "react-router-dom";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -13,6 +14,7 @@ export default function AutoSoftHeros() {
   const subtitleRef  = useRef(null);
   const paragraphRef = useRef(null);
   const btnRef       = useRef(null);
+  const navigate = useNavigate();
 
   useEffect(() => {
     const ctx = gsap.context(() => {
@@ -197,7 +199,7 @@ export default function AutoSoftHeros() {
           </div>
 
           <div ref={btnRef} style={{ display: 'flex', alignItems: 'center', gap: '20px', marginTop: '8px' }}>
-            <button className="asd-btn">Hire Us</button>
+            <button className="asd-btn" onClick={navigate.bind(null, "/contact")}>Hire Us</button>
           </div>
         </div>
       </div>

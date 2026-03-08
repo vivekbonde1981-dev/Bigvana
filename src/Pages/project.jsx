@@ -10,7 +10,7 @@ const ProjectShowcase = () => {
       technologies: ["Python", "TensorFlow", "FastAPI", "Docker"],
       category: "Automation",
       github: "https://github.com/yourusername/ai-automation",
-      live: "http://localhost:3000",
+      live: "http://13.206.13.64/project/",
     },
     {
       id: 2,

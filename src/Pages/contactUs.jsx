@@ -1,10 +1,14 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { gsap } from 'gsap';
+import { nav } from 'framer-motion/client';
+import { useNavigate } from 'react-router-dom';
 
 const ContactForm = () => {
   const [formData, setFormData] = useState({
     businessName: '', phone: '', email: '', service: '', bottleneck: '', launchDate: ''
   });
+  const navigate = useNavigate();
+  
 
   const isFormValid = Object.values(formData).every(val => val.trim() !== '');
 
@@ -20,6 +24,46 @@ const ContactForm = () => {
   }, []);
 
   const handleChange = (e) => setFormData({ ...formData, [e.target.name]: e.target.value });
+// 1. Initialize our states
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [statusMessage, setStatusMessage] = useState("");
+
+  const onSubmit = async (event) => {
+    event.preventDefault();
+    
+    // 2. Start loading
+    setIsSubmitting(true);
+    setStatusMessage("Sending...");
+
+    const formData = new FormData(event.target);
+    formData.append("access_key", import.meta.env.VITE_WEB3FORM_ACCESS_KEY);
+
+    try {
+      const response = await fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        body: formData
+      });
+
+      const data = await response.json();
+
+      if (data.success) {
+        setStatusMessage("Success! Your message was sent.");
+        event.target.reset();
+        setTimeout(() => {
+          navigate("/thank-you"); // Redirect to thank you page after 1 second
+        }, 1000);
+      } else {
+        setStatusMessage("Something went wrong. Please try again.");
+      }
+    } catch (error) {
+      setStatusMessage("Network error. Check your connection.");
+    } finally {
+      // 3. Stop loading regardless of success or failure
+      setIsSubmitting(false);
+    }
+  };
+
+  
 
   return (
     <div className="page-wrapper">
@@ -35,7 +79,7 @@ const ContactForm = () => {
           </p>
         </div>
 
-        <form className="form-section" onSubmit={(e) => e.preventDefault()}>
+        <form className="form-section" onSubmit={onSubmit}>
           <div className="grid-layout">
             <div className="field animate-in">
               <label>Business Name</label>
@@ -72,6 +116,8 @@ const ContactForm = () => {
               </button>
             </div>
           </div>
+          {/* 5. Display the status message to the user */}
+      {statusMessage && <p className="status-info" style={{marginTop:"10px", color: 'green'}}>{statusMessage}</p>}
         </form>
       </div>
 

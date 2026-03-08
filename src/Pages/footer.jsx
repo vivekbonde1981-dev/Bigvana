@@ -40,7 +40,7 @@ const AgencyFooter = () => {
       <div className="footer-content">
         <div className="footer-main">
           <div className="footer-brand">
-            <div className="brand-logo">AUTOMATE.DEV</div>
+            <div className="brand-logo">BigVana.store</div>
             <p className="brand-tagline">
               Transforming businesses through intelligent automation and cutting-edge software solutions.
             </p>
@@ -63,7 +63,7 @@ const AgencyFooter = () => {
             <h3>Services</h3>
             <ul>
               {['Process Automation', 'Custom Software', 'AI Integration', 'Cloud Solutions'].map(item => (
-                <li key={item}><a href="#">{item}</a></li>
+                <li key={item}><a href="/service">{item}</a></li>
               ))}
             </ul>
           </div>
@@ -72,20 +72,20 @@ const AgencyFooter = () => {
             <h3>Company</h3>
             <ul>
               {['About Us', 'Our Team', 'Case Studies', 'Careers'].map(item => (
-                <li key={item}><a href="#">{item}</a></li>
+                <li key={item}><a href="/about">{item}</a></li>
               ))}
             </ul>
           </div>
 
           <div className="footer-column">
             <h3>Contact</h3>
-            <div className="contact-item"><span>📧</span> hello@automate.dev</div>
-            <div className="contact-item"><span>📱</span> +1 (555) 123-4567</div>
+            <div className="contact-item"><span>📧</span> vivekbonde1981@gmail.com</div>
+            <div className="contact-item"><span>📱</span> +91 9689299714</div>
           </div>
         </div>
 
         <div className="footer-bottom">
-          <div className="copyright">© 2026 AUTOMATE.DEV. Built with precision.</div>
+          <div className="copyright">© 2026 BigVana Built with precision.</div>
           <div className="footer-links">
             <a href="#">Privacy Policy</a>
             <a href="#">Terms</a>

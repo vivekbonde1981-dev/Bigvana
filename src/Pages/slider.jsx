@@ -2,6 +2,7 @@
 
 import { useState, useEffect, useRef, useCallback } from "react";
 import { useTheme } from "../ThemeContext"; // adjust path based on your folder structure
+import { useNavigate } from "react-router-dom";
 import gsap from "gsap";
 
 const CONTENT = {
@@ -140,7 +141,7 @@ export default function QuantumFlow() {
   const timersRef = useRef([]);
   const switching = useRef(false);
   const content   = CONTENT[live];
-
+  const navigate = useNavigate();
   useEffect(() => {
     if (!document.getElementById("qf-gf")) {
       const l = document.createElement("link");
@@ -233,11 +234,11 @@ export default function QuantumFlow() {
           </div>
 
           <div className="qf-ctas">
-            <button className="qf-cta-btn qf-cta-primary">
+            <button className="qf-cta-btn qf-cta-primary" onClick={navigate.bind(null, "/service")}>
               <span>EXPLORE SERVICES</span>
               <span className="qf-cta-arrow">→</span>
             </button>
-            <button className="qf-ghost-btn">VIEW PORTFOLIO</button>
+            {/* <button className="qf-ghost-btn">VIEW PORTFOLIO</button> */}
           </div>
 
           <div className="qf-rule" />
