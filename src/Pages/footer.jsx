@@ -40,7 +40,7 @@ const AgencyFooter = () => {
       <div className="footer-content">
         <div className="footer-main">
           <div className="footer-brand">
-            <div className="brand-logo">BigVana.store</div>
+            <div className="brand-logo">BigVana.in</div>
             <p className="brand-tagline">
               Transforming businesses through intelligent automation and cutting-edge software solutions.
             </p>

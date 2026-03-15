@@ -40,12 +40,14 @@ export default function Header() {
 
         {/* Logo */}
         <div className="lasan flex items-center gap-3 cursor-pointer group">
-          <div className="relative w-10 h-10 flex items-center justify-center">
-            <div
+          
+          <div className="relative w-15 h-10 flex items-center justify-center">
+           <img src="icon.png" alt="Author" style={{height:"50px",width:"150px",marginTop:"5px"}} />
+            {/* <div
               className="absolute inset-0 border-2 rounded-lg rotate-45 transition-transform group-hover:rotate-[225deg]"
               style={{ borderColor: 'var(--accent)' }}
             />
-            <div className="relative w-5 h-5 rounded-[3px]" style={{ backgroundColor: 'var(--accent)' }} />
+            <div className="relative w-5 h-5 rounded-[3px]" style={{ backgroundColor: 'var(--accent)' }} /> */}
           </div>
           <div className="flex flex-col leading-none">
             <span className="text-xl font-bold font-['Montserrat']" style={{ color: 'var(--text-primary)' }}>
