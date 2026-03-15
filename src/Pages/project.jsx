@@ -5,21 +5,21 @@ const ProjectShowcase = () => {
   const projects = [
     {
       id: 1,
-      title: "AI-Powered Task Automation",
-      description: "Intelligent automation system that streamlines repetitive workflows using machine learning algorithms. Reduces manual work by 80% through smart scheduling and predictive analysis.",
-      technologies: ["Python", "TensorFlow", "FastAPI", "Docker"],
-      category: "Automation",
-      github: "https://github.com/yourusername/ai-automation",
-      live: "http://13.206.13.64/project/",
+      title: "Animated Website For BikeShowrooms",
+      description: "An immersive, high-performance digital showroom featuring interactive 3D visuals and fluid scroll-triggered animations to showcase the soul of every ride.",
+      technologies: ["React", "GSAP", "FFMPEG", "Docker"],
+      category: "Development",
+      github: "https://github.com/vivekbonde1981-dev/animated-Project",
+      live: "https://bigvana.in/project_1/",
     },
     {
       id: 2,
-      title: "Microservices Architecture Platform",
-      description: "Scalable microservices platform built with containerization and orchestration. Handles 10M+ requests daily with 99.9% uptime through intelligent load balancing.",
-      technologies: ["Node.js", "Kubernetes", "Redis", "PostgreSQL"],
+      title: "MegaBlog React+Appwrite Website",
+      description: "A high-performance blogging platform featuring a robust React frontend and seamless Appwrite backend integration for secure authentication and real-time content management",
+      technologies: ["Appwrite", "React", "Docker", "TextEditor"],
       category: "Development",
-      github: "https://github.com/yourusername/microservices",
-      live: "http://localhost:3000",
+      github: "https://github.com/vivekbonde1981-dev/BigPost",
+      live: "https://bigvana.in/project_2/",
     },
   ];
 
