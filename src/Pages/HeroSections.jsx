@@ -3,6 +3,21 @@ import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { useTheme } from "../ThemeContext";
 import { useNavigate } from "react-router-dom";
+import { 
+  Search, 
+  Menu, 
+  X, 
+  ChevronRight, 
+  Github, 
+  Twitter, 
+  Linkedin, 
+  ArrowRight,
+  Clock,
+  User,
+  Tag,
+  Bookmark,
+ MessageCircle
+} from 'lucide-react';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -198,8 +213,21 @@ export default function AutoSoftHeros() {
             </p>
           </div>
 
+          <div className="flex gap-4">
+                <a href="#" className="p-2 bg-neutral-100 rounded-full hover:bg-indigo-100 hover:text-indigo-600 transition-all">
+                  < MessageCircle size={40} />
+                </a>
+                <a href="#" className="p-2 bg-neutral-100 rounded-full hover:bg-indigo-100 hover:text-indigo-600 transition-all">
+                  <Github size={40} />
+                </a>
+                <a href="#" className="p-2 bg-neutral-100 rounded-full hover:bg-indigo-100 hover:text-indigo-600 transition-all">
+                  <Linkedin size={40} />
+                </a>
+              </div>
+
           <div ref={btnRef} style={{ display: 'flex', alignItems: 'center', gap: '20px', marginTop: '8px' }}>
             <button className="asd-btn" onClick={navigate.bind(null, "/contact")}>Hire Us</button>
+            
           </div>
         </div>
       </div>
