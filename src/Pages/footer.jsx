@@ -3,6 +3,23 @@ import gsap from 'gsap';
 import { useGSAP } from '@gsap/react';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { motion } from 'framer-motion';
+import { IoLogoWhatsapp } from "react-icons/io";
+import {
+  Search,
+  Menu,
+  X,
+  ChevronRight,
+  Github,
+  Twitter,
+  Linkedin,
+  ArrowRight,
+  Clock,
+  User,
+  Tag,
+  Bookmark,
+  MessageCircle,
+  Instagram
+} from "lucide-react";
 
 if (typeof window !== 'undefined') {
   gsap.registerPlugin(ScrollTrigger);
@@ -45,17 +62,56 @@ const AgencyFooter = () => {
               Transforming businesses through intelligent automation and cutting-edge software solutions.
             </p>
             <div className="social-links">
-              {['LinkedIn', 'GitHub', 'Twitter'].map((platform) => (
+              {/* {['LinkedIn', 'GitHub', 'Twitter'].map((platform) => ( */}
                 <motion.a
-                  key={platform}
-                  href="#"
+                 
+                  href="https://wa.me/919689299714?text=Hi%20Vivek%20from%20Bigvana!%20I'm%20interested%20in%20your%20Automation,%20Web%20and%20Software%20Services."
+                  target="_blank" 
+                  rel="noreferrer"
                   className="social-link"
                   whileHover={{ scale: 1.1, rotate: 5 }}
                   whileTap={{ scale: 0.9 }}
                 >
-                  <span style={{ fontSize: '10px' }}>{platform[0]}</span>
+                  
+                  <IoLogoWhatsapp size={40} />
                 </motion.a>
-              ))}
+                <motion.a
+                 
+                  href="https://github.com/vivekbonde1981-dev"
+                  target="_blank" 
+                  rel="noreferrer"
+                  className="social-link"
+                  whileHover={{ scale: 1.1, rotate: 5 }}
+                  whileTap={{ scale: 0.9 }}
+                >
+                  
+                  <Github size={40} />
+                </motion.a>
+                <motion.a
+                 
+                  href="https://www.instagram.com/bigvana.in?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
+                  target="_blank" 
+                  rel="noreferrer"
+                  className="social-link"
+                  whileHover={{ scale: 1.1, rotate: 5 }}
+                  whileTap={{ scale: 0.9 }}
+                >
+                  
+                  <Instagram size={40} />
+                </motion.a>
+                <motion.a
+                 
+                  href="https://www.linkedin.com/company/bigvana"
+                  target="_blank" 
+                  rel="noreferrer"
+                  className="social-link"
+                  whileHover={{ scale: 1.1, rotate: 5 }}
+                  whileTap={{ scale: 0.9 }}
+                >
+                  
+                  <Linkedin size={40} />
+                </motion.a>
+              {/* ))}  */}
             </div>
           </div>
 

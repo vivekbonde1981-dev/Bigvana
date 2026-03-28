@@ -23,6 +23,14 @@ export default function Header() {
     { id: 4, name: "SERVICE",  slug: "/service" },
   ];
 
+  const mobileNavItems = [
+    { id: 1, name: 'HOME',     slug: "/" },
+    { id: 2, name: "OUR WORK", slug: "/projects" },
+    { id: 3, name: "ABOUT",    slug: "/about" },
+    { id: 4, name: "SERVICE",  slug: "/service" },
+    { id: 5, name: "CONTACT",  slug: "/contact" },
+  ];
+
   return (
     <header
       ref={headerRef}
@@ -158,13 +166,13 @@ export default function Header() {
       {/* Mobile Menu */}
       {isOpen && (
         <div
-          className="absolute top-[75px] left-0 w-full flex flex-col p-6 gap-4 md:hidden border-b"
+          className="absolute top-[75px] left-0 w-full flex flex-col p-6 gap-4 md:hidden border-b justify-center items-center"
           style={{
             backgroundColor: 'var(--bg-mobile-menu)',
             borderColor: 'var(--scrolled-border)',
           }}
         >
-          {navItems.map((item) => (
+          {mobileNavItems.map((item) => (
             <Link
               key={item.id}
               to={item.slug}
