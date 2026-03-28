@@ -319,8 +319,10 @@ export default function AutoSoftHeros() {
 
           <div className="flex gap-4" ref={iconRef}>
             <a
-              href="#"
-              className="p-2 rounded-full hover:text-[#38bdf8] transition-all"
+              href="https://wa.me/919689299714?text=Hi%20Vivek%20from%20Bigvana!%20I'm%20interested%20in%20your%20Automation,%20Web%20and%20Software%20Services."
+               target="_blank" 
+                  rel="noreferrer"
+              className="p-2 rounded-full hover:text-[rgb(56,189,248)] transition-all"
             >
               <IoLogoWhatsapp
                 size={40}
@@ -329,13 +331,18 @@ export default function AutoSoftHeros() {
             </a>
            
             <a
-              href="#"
+              href="https://www.linkedin.com/company/bigvana"
+               target="_blank" 
+                  rel="noreferrer"
               className="p-2 rounded-full hover:text-[#38bdf8] transition-all"
             >
               <Linkedin size={40} />
             </a>
             <a
-              href="#"
+              href="https://www.instagram.com/bigvana.in?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
+              target="_blank"
+              rel="noreferrer"
+
               className="p-2 rounded-full hover:text-[#38bdf8] transition-all"
             >
               <Instagram size={40} />
